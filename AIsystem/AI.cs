@@ -56,7 +56,7 @@ public class AI : MonoBehaviour
                 i2 += 1;
             }
 
-            double value2 = System.Math.Tanh(addupvalue2 + weights[AIManager.instance.numofinputs + AIManager.instance.numofoutputs * (AIManager.instance.numofneurons + 1)]);
+            double value2 = System.Math.Tanh(addupvalue2 + weights[AIManager.instance.numofinputs + (AIManager.instance.numofinputs + 1) * i + AIManager.instance.numofoutputs * (AIManager.instance.numofneurons + 1)]);
 
             addupvalue += (float)value2 * (weights[i + numofoutput * (AIManager.instance.numofneurons + 1)]);
             i += 1;
