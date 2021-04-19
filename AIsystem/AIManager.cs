@@ -81,7 +81,7 @@ public class AIManager : MonoBehaviour
             AIs[i2].GetComponent<AI>().weights.Clear();
             AIs[i2].GetComponent<AI>().initialize();
             i = 0;
-            while (i < (numofneurons * 6 + 1) * numofoutputs + (numofinputs * 6 + 1) * numofneurons)
+            while (i < (numofneurons + 1) * numofoutputs + (numofinputs + 1) * numofneurons)
             {
                 if (Generate_from_AIinfo && i < best_weightsinfo.Count)
                 {
@@ -189,7 +189,7 @@ public class AIManager : MonoBehaviour
                     {
                         AIs[i2].GetComponent<AI>().weights.Clear();
                         i = 0;
-                        while (i < (numofneurons * 6 + 1) * numofoutputs + (numofinputs * 6 + 1) * numofneurons)
+                        while (i < (numofneurons + 1) * numofoutputs + (numofinputs + 1) * numofneurons)
                         {
                             if (Random.Range(1.00000f, 100.00000f) <= mutation_percentage)
                             {
